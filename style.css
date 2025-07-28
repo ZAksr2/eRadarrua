@@ -53,12 +53,7 @@ body {
 
 .bg {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
+    inset: 0;
     z-index: 2;
     background-image: url(bg.png);
     opacity: 0.05;
@@ -101,7 +96,6 @@ button {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100vw;
     height: 60px;
     border: none;
     background-color: black;
