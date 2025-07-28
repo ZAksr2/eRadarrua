@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"  rel="stylesheet">
+    <title>красіва жизнь Алєговни</title>
+</head>
+<body>
+    <div class="all">
+        <div class="img" style="background-color: rgb(44, 85, 65);"> <!-- img -->
+            <img src="4.jpg" height="400px">
+        </div>
+        <div> <!-- txt -->
+            <h1>Красіва жизнь Алєговни</h1>
+            <h2>"Незавершений роман…"</h2>
+            <h2>Сезон 1 | Серія 3</h2>
+            <p>Гірка правда чи солодка брехня ? Питання, з яким Алєговна не спала, не їла, а лише курила одну за одною Вінстон з чорничною капсулою…</p>
+            <p>З дня, коли вона побачила Льоню в тік-тоці з якоюсь шимпанзе, пройшло 3 доби. Льоня дзвонив, записував голосові, писав у всі месенджери, але Алєговна не читала й не відповідала на дзвінки. Під кінець третьої доби Жанна примусила себе вийти з квартири і то тільки тому, що закінчились сігарєти і банани.</p>
+            <p>Під підʼїздом (а Алєговна жила біля жовтого Дрімтауна) ждав Льоня… Він глянув на неї глазами повних горилячих сліз і сказав одну фразу : «Жанночка Алєговна, на самом дєлє мене звати Едік»…</p>
+            <p>В Алєговни випала сігарєта з рук…</p>
+        </div>
+        <div style="display: flex; width: 585px; margin-top: 50px; margin-bottom: 50px;">
+            <a href="page2.html">Попередня серія</a>
+            <a href="page4.html">Наступна серія</a>
+        </div>
+    </div>
+    <button onclick="hide()">
+        <a href="https://send.monobank.ua/jar/ANpXj4iR12" target="_blank">Прибрати водяний знак</a>
+    </button>
+    <div class="bg"></div>
+    <script>
+        function hide() {
+            const bg = document.querySelector('.bg');
+            const btn = document.querySelector('button');
+            bg.classList.add('hide');
+            btn.classList.add('hide');
+            localStorage.setItem('hideWatermark', 'true');
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('hideWatermark') === 'true') {
+                document.querySelector('.bg').classList.add('hide');
+                document.querySelector('button').classList.add('hide');
+            }
+        });
+    </script>
+</body>
+</html>

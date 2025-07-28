@@ -3,39 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>красіва жизнь Алєговни</title>
-    <style>
-        @media screen and (min-width: 500px) and (max-width: 600px) {.all {zoom: 70%;}}
-        @media screen and (min-width: 600px) and (max-width: 700px) {.all {zoom: 75%;}}
-        @media screen and (min-width: 700px) and (max-width: 800px) {.all {zoom: 85%;}}
-        @media screen and (min-width: 800px) and (max-width: 900px) {.all {zoom: 95%;}}
-        @media screen and (min-width: 900px) and (max-width: 1029px) {.all {zoom: 100%;}}
-        @media screen and (min-width: 1029px) and (max-width: 1285px) {.all {zoom: 110%}}
-        @media screen and (min-width: 1285px) and (max-width: 1680px) {.all {zoom: 120%;}}
-        @media screen and (min-width: 1680px) and (max-width: 7685px) {.all {zoom: 130%;}}
-        body {
-            background-color: rgb(24, 37, 51);
-            color: whitesmoke;
-        }
-        .all {
-            padding: 10px;
-            margin: 0 auto 0 auto;
-            width: 585px;
-            font-family: "PT Sans", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-        .img {
-            display: flex;
-            overflow: hidden;
-            height: 400px;
-            width: 585px;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
     <div class="all">
@@ -44,18 +16,41 @@
             <img src="2.jpg">
         </div>
         <div> <!-- txt -->
-            <h1>Жанна Алєговна живе красіву жизнь.</h1>
+            <h1>Красіва жизнь Алєговни</h1>
+            <h2>"Жанна Алєговна живе красіву жизнь"</h2>
             <h2>Сезон 1 | Серія 1</h2>
             <p>По образованію учителька, але ніколи не хотіла працювати по професії. Не її.</p>
             <p>Хотіла буть актрісою. Але незаурядна яскрава зовнішність відлякувала продюсерів…</p>
             <p>І вона рішила піти в развєдчікі.</p>
             <p>А шо ? По-перше, це інтєрєсно. По-друге, абізяна - развєдчік - це шось унікальне ! А вона завжди любила виділятись.</p>
             <p>Взяли канєшно її не з первого разу за службу. Але все ж вдалось.</p>
-            <p style="margin-top: 15px;">І от, на одному сєкрєтному заданіі случайна встрєча ізмінила жизнь Алєговни:</p>
+            <p>І от, на одному сєкрєтному заданіі случайна встрєча ізмінила жизнь Алєговни:</p>
             <p>серед натовпу вона побачила горіллу - красавчіка. Його не можна було не побачити, бо він був великий і кричав щось типу «уууу уууу ууу». Такій собі настоящій мужчіна.</p>
             <p>Як мудра жінка, Жанна Алєговна не подала виду, а як развєдчік - на другий день пробила по всіх соцсєтях всю інфу про Льоню (так звали того горіллу).</p>
             <p>Виявилось, що Льоня бізнесмен з квартірой на Пєчєрских Липках. Так шо Алєговні він понравився ще більше…</p>
         </div>
+        <div style="display: flex; width: 585px; margin-top: 50px; margin-bottom: 50px;"> 
+            <a href="page2.html">Наступна серія</a>
+        </div>
     </div>
+    <button onclick="hide()">
+        <a href="https://send.monobank.ua/jar/ANpXj4iR12" target="_blank">Прибрати водяний знак</a>
+    </button>
+    <div class="bg"></div>
+    <script>
+        function hide() {
+            const bg = document.querySelector('.bg');
+            const btn = document.querySelector('button');
+            bg.classList.add('hide');
+            btn.classList.add('hide');
+            localStorage.setItem('hideWatermark', 'true');
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('hideWatermark') === 'true') {
+                document.querySelector('.bg').classList.add('hide');
+                document.querySelector('button').classList.add('hide');
+            }
+        });
+    </script>
 </body>
 </html>
