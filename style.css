@@ -110,3 +110,43 @@ button a {
 .hide {
     display: none;
 }
+
+.text {
+    max-height: 0;
+    overflow: hidden;
+}
+
+#toggle:checked~.text {
+    max-height: min-content;
+}
+
+#toggle:checked~.labe span {
+    display: none;
+}
+
+#toggle:checked~.labe:hover {
+    border-bottom: none;
+    opacity: 0.6;
+}
+
+.labe {
+    font-size: 16px;
+    color: wheat;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.text ul {
+    margin-left: -15px;
+}
+
+.pages {
+    text-align: justify;
+    line-height: 2;
+}
+
+.pages a,
+.pages span {
+    margin-left: 10px;
+    margin-right: 10px;
+}
