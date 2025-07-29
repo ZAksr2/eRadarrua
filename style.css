@@ -141,7 +141,6 @@ button a {
 }
 
 .pages {
-    text-align: justify;
     line-height: 2;
 }
 
@@ -149,4 +148,10 @@ button a {
 .pages span {
     margin-left: 10px;
     margin-right: 10px;
+    display: inline-block;
+    width: 65px;
+}
+
+.pages span {
+    cursor: default;
 }
