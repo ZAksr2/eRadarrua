@@ -1,0 +1,162 @@
+@media screen and (min-width: 1px) and (max-width: 600px) {
+    .all {
+        zoom: 65%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+    .all {
+        zoom: 75%;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+    .all {
+        zoom: 85%;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+    .all {
+        zoom: 95%;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1029px) {
+    .all {
+        zoom: 100%;
+    }
+}
+
+@media screen and (min-width: 1029px) and (max-width: 1285px) {
+    .all {
+        zoom: 110%
+    }
+}
+
+@media screen and (min-width: 1285px) and (max-width: 1680px) {
+    .all {
+        zoom: 120%;
+    }
+}
+
+@media screen and (min-width: 1680px) and (max-width: 7685px) {
+    .all {
+        zoom: 130%;
+    }
+}
+
+body {
+    background-color: rgb(24, 37, 51);
+    color: whitesmoke;
+}
+
+.bg {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    background-image: url(bg.png);
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.all {
+    padding: 10px;
+    margin: 0 auto 0 auto;
+    width: 585px;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.img {
+    display: flex;
+    overflow: hidden;
+    height: 400px;
+    width: 585px;
+    border-radius: 5px;
+}
+
+a {
+    transition: 0.3s;
+    color: whitesmoke;
+    margin: auto;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+img {
+    margin: auto;
+}
+
+button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    border: none;
+    background-color: black;
+    z-index: 3;
+}
+
+button a {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+.text {
+    max-height: 0;
+    overflow: hidden;
+}
+
+#toggle:checked~.text {
+    max-height: min-content;
+}
+
+#toggle:checked~.labe {
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+#toggle:checked~.labe:hover {
+    opacity: 0.4;
+}
+
+.labe {
+    font-size: 16px;
+    color: wheat;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.labe:hover {
+    opacity: 0.6;
+}
+
+.text ul {
+    margin-left: -15px;
+}
+
+.pages {
+    line-height: 2;
+}
+
+.pages a,
+.pages span {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    width: 65px;
+}
+
+.pages span {
+    cursor: default;
+}
